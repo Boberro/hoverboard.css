@@ -1,0 +1,14 @@
+{
+  "name": "hoverboard.css",
+  "version": "0.0.1",
+  "description": "Hover effect for the semantic Figure HTML5 element",
+  "style": "hoverboard.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Cyraniak (mateusz.cyraniak@altersofthouse.com)",
+  "license": "ISC",
+  "keywords": [
+    "css"
+  ]
+}

@@ -1,0 +1,5 @@
+@import url("css/base.css") layer(hoverboard-default);
+@import url("css/slide.css") layer(hoverboard-default);
+@import url("css/sudden.css") layer(hoverboard-default);
+
+@layer hoverboard-default, hoverboard;

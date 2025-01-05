@@ -1,0 +1,20 @@
+body, html {
+    min-height: 100vh;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.container {
+    min-height: 100%;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 1.5rem;
+}

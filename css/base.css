@@ -1,0 +1,38 @@
+.hoverboard {
+    position: relative;
+    margin: 0;
+
+    border-radius: .5rem;
+
+    overflow: hidden;
+
+    img {
+        position: relative;
+        display: block;
+    }
+
+    figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: rgb(50, 114, 154)
+    }
+
+    > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &:focus, &:not(:has(figcaption a)):focus-within {
+        outline: 2px solid blue;
+        outline-offset: 4px;
+    }
+}
