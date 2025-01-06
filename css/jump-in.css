@@ -1,29 +1,31 @@
-.hoverboard.jump-in-left {
-    figcaption {
-        transform: translate(100%, 0) rotate(-90deg);
-        transition: all .5s ease, transform .5s cubic-bezier(0.5, 0, 0.4, 1.3);
-        transform-origin: top right;
+.hoverboard {
+    &.jump-in-left {
+        --hoverboard-transform: rotate(-90deg);
+        --hoverboard-transform-origin: top right;
+        --hoverboard-hover-transform-origin: bottom left;
     }
 
-    &:hover, &:focus, &:focus-within {
+    &.jump-in-right {
+        --hoverboard-transform: rotate(90deg);
+        --hoverboard-transform-origin: top left;
+        --hoverboard-hover-transform-origin: bottom right;
+    }
+
+    &.jump-in-left,
+    &.jump-in-right {
         figcaption {
-            transform: translate(0, 0) rotate(0deg);
-            transform-origin: bottom left;
+            transform: var(--hoverboard-transform);
+            transform-origin: var(--hoverboard-transform-origin);
+            transition: transform-origin var(--hoverboard-transform-time) linear, transform var(--hoverboard-transform-time) cubic-bezier(0.5, 0, 0.4, 1.3);
+            transition-delay: var(--hoverboard-transform-delay);
         }
-    }
-}
 
-.hoverboard.jump-in-right {
-    figcaption {
-        transform: translate(-100%, 0) rotate(90deg);
-        transition: all .5s ease, transform .5s cubic-bezier(0.5, 0, 0.4, 1.3);
-        transform-origin: top left;
-    }
-
-    &:hover, &:focus, &:focus-within {
-        figcaption {
-            transform: translate(0, 0) rotate(0deg);
-            transform-origin: bottom right;
+        &:hover, &:focus, &:focus-within {
+            figcaption {
+                transform: rotate(0deg);
+                transform-origin: var(--hoverboard-hover-transform-origin);
+                transition-delay: 0s;
+            }
         }
     }
 }
