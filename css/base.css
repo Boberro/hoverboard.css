@@ -12,11 +12,13 @@
 
     img {
         position: relative;
+        z-index: -5;
         display: block;
     }
 
     figcaption {
         position: absolute;
+        z-index: -2;
         top: 0;
         left: 0;
         bottom: 0;
