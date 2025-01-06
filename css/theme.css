@@ -1,6 +1,13 @@
 :root {
     --hoverboard-theme-border-radius: .5rem;
+
     --hoverboard-theme-background: rgb(50, 114, 154);
+
+    --hoverboard-theme-box-shadow-color: #000;
+    --hoverboard-theme-box-shadow-offset: 0 0;
+    --hoverboard-theme-box-shadow-blur: 1rem;
+    --hoverboard-theme-box-shadow-spread: 0;
+
     --hoverboard-theme-outline-color: blue;
     --hoverboard-theme-outline-offset: .25rem;
     --hoverboard-theme-outline-style: solid;

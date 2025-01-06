@@ -1,4 +1,5 @@
 :root {
+    --hoverboard-transform-time: .5s;
 }
 
 .hoverboard {
@@ -23,6 +24,7 @@
         padding: 1rem;
         border-radius: var(--hoverboard-theme-border-radius);
         background: var(--hoverboard-theme-background);
+        box-shadow: var(--hoverboard-theme-box-shadow-color) var(--hoverboard-theme-box-shadow-offset) var(--hoverboard-theme-box-shadow-blur) var(--hoverboard-theme-box-shadow-spread);
     }
 
     > a {
@@ -33,7 +35,8 @@
         right: 0;
     }
 
-    &:focus, &:not(:has(figcaption a)):focus-within {
+    &:focus,
+    &:not(:has(figcaption a)):focus-within {
         outline: var(--hoverboard-theme-outline-width) var(--hoverboard-theme-outline-style) var(--hoverboard-theme-outline-color);
         outline-offset: var(--hoverboard-theme-outline-offset);
     }
