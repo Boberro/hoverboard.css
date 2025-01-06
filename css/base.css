@@ -1,5 +1,6 @@
 :root {
     --hoverboard-transform-time: .5s;
+    --hoverboard-transform-delay: .15s;
 }
 
 .hoverboard {

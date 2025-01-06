@@ -28,12 +28,14 @@
         figcaption {
             transform: translate(var(--hoverboard-translate));
             transition: transform var(--hoverboard-transform-time) ease-in;
+            transition-delay: var(--hoverboard-transform-delay);
         }
 
         &:hover, &:focus, &:focus-within {
             figcaption {
                 transform: translate(0, 0);
                 transition: transform var(--hoverboard-transform-time) var(--hoverboard-transform-easing);
+                transition-delay: 0s;
             }
         }
     }
