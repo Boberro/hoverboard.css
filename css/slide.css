@@ -19,7 +19,7 @@
     &.slide-right,
     &.slide-up,
     &.slide-down {
-        --hoverboard-transform-easing: ease;
+        --hoverboard-transform-easing: ease-in;
 
         &.slam {
             --hoverboard-transform-easing: cubic-bezier(0.5, 0, 0.4, 1.3);
