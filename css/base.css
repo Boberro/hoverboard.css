@@ -1,8 +1,10 @@
+:root {
+}
+
 .hoverboard {
     position: relative;
-    margin: 0;
 
-    border-radius: .5rem;
+    border-radius: var(--hoverboard-theme-border-radius);
 
     overflow: hidden;
 
@@ -19,8 +21,8 @@
         right: 0;
 
         padding: 1rem;
-        border-radius: .5rem;
-        background-color: rgb(50, 114, 154)
+        border-radius: var(--hoverboard-theme-border-radius);
+        background: var(--hoverboard-theme-background);
     }
 
     > a {
@@ -32,7 +34,7 @@
     }
 
     &:focus, &:not(:has(figcaption a)):focus-within {
-        outline: 2px solid blue;
-        outline-offset: 4px;
+        outline: var(--hoverboard-theme-outline-width) var(--hoverboard-theme-outline-style) var(--hoverboard-theme-outline-color);
+        outline-offset: var(--hoverboard-theme-outline-offset);
     }
 }
