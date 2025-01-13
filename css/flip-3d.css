@@ -1,0 +1,67 @@
+.hoverboard {
+    &.flip-3d {
+        overflow: visible;
+        perspective: 500px;
+        transform-style: preserve-3d;
+
+        &:before {
+        }
+
+        &:after {
+        }
+
+        figcaption {
+            backface-visibility: hidden;
+            transform: rotate3d(0, 1, 0, -180deg);
+            transition: transform var(--hoverboard-transform-time) cubic-bezier(.2, .85, .4, 1.275);
+            transform-style: preserve-3d;
+
+            > * {
+                transform: translate3d(0, 0, 2rem) scale(.93);
+            }
+
+            &:before {
+            }
+
+            &:after {
+            }
+        }
+
+        > img,
+        > picture img {
+            backface-visibility: hidden;
+            transform: none;
+            transition: transform var(--hoverboard-transform-time) cubic-bezier(.2, .85, .4, 1.275);
+
+            border-radius: var(--hoverboard-theme-border-radius);
+            box-shadow: var(--hoverboard-theme-box-shadow-color) var(--hoverboard-theme-box-shadow-offset) var(--hoverboard-theme-box-shadow-blur) var(--hoverboard-theme-box-shadow-spread);
+        }
+
+
+        &:hover, &:focus, &:focus-within {
+            &:before {
+            }
+
+            &:after {
+            }
+
+            figcaption {
+                transform: none;
+
+                > * {
+                }
+
+                &:before {
+                }
+
+                &:after {
+                }
+            }
+
+            > img,
+            > picture img {
+                transform: rotate3d(0, 1, 0, 180deg);
+            }
+        }
+    }
+}
